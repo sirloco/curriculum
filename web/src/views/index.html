@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Santi</title>
+
+    <!--CSS personalizado-->
+    <link rel="stylesheet" href="..\public\css\estilos.css">
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+    </style>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-custom">
+      <div class="container-fluid">
+          <div class="navbar-header">
+            <a>Santiago González Correa</a>
+          </div>
+         
+      </div>
+    </nav>
+    
+    <div class="contenedor">
+
+      <div class="perfil">
+            <div class="hex" style="background-image: url(../public/images/foto.PNG);">
+              <a href="#"></a>
+              <div class="corner-1"></div>
+              <div class="corner-2"></div>
+
+              <span id="ojo1">.</span>
+          
+            </div>
+            
+            <div class="datos">
+              <div><a href="https://iconscout.com/icons/location" target="_blank"><img src="../public/Images/location.png" alt="https://iconscout.com"></img></a><a href="https://www.google.com/maps/place/Vitoria-Gasteiz" target="_blank">Vitoria-Gasteiz</a></div>
+              <div><a href="https://iconscout.com/icons/phone" target="_blank"><img src="../public/Images/phone.png" alt="https://iconscout.com"></a><a>606050632</a></div>
+              <div><a><img src="../public/Images/mail.png"></img></a><a>sgcalava@gmail.com</a></div>
+              <a href="https://www.linkedin.com/in/sgc-vitoria/"><img src="https://tratamientodetextos.com/wp-content/uploads/2016/04/linkedin-logo.png" class="lindimension" alt="Linkedin" /></a>
+              <a href="https://www.infojobs.net/santiago-gonzalez-correa.prf"><img src="https://media.infojobs.net/appgrade/icons/ico-ij-android.png" class="ijdimension" alt="Infojobs" /></a>
+            </div>
+      </div>
+      <div class="trabajos">
+
+        <div onmouseenter="pon('dany');" onmouseleave="quita('trabajo1');">
+          <p>2007 - 2007</p>
+        </div>
+
+        <div onmouseenter="pon('scape');" onmouseleave="quita('trabajo2');">
+          <p>2008 - 2008</p>
+        </div>
+
+        <div onmouseenter="pon('onusa');" onmouseleave="quita('trabajo3');">
+          <p>2008 - 2010</p>
+        </div>
+
+        <div onmouseenter="pon('trw');" onmouseleave="quita('trabajo4');">
+          <p>2010 - 2011</p>
+        </div>
+
+        <div onmouseenter="pon('option');" onmouseleave="quita('trabajo5');">
+          <p>2012 - 2012</p>
+        </div>
+        
+        <div onmouseenter="pon('media');" onmouseleave="quita('trabajo6');">
+          <p>2014 - 2015</p>
+        </div>
+        
+        <div onmouseenter="pon('cash');" onmouseleave="quita('trabajo7');">
+          <p>2015 - 2018</p>
+        </div>
+
+        <div onmouseenter="pon('nor');" onmouseleave="quita('trabajo8');">
+          <p>2018 - 2021</p>
+        </div>
+
+      </div>
+
+      <div class="descripcion" id="aprendido"></div>
+
+    </div>
+
+    <template id="dany">
+      <article id="trabajo1">
+        <p>Exclusivas Dany</p>
+        <img src="../public/Images/dany.jpg"></img>
+      </article>
+    </template>
+
+    <template id="scape">
+      <article id="trabajo2">
+        <p>Informática Scape</p>
+        <img src="../public/Images/scape.png"></img>
+      </article>
+    </template>
+
+    <template id="onusa">
+      <article id="trabajo3">
+        <p>pycflorga</p>
+        <img src="../public/Images/pycflorga.jpg"></img>
+      </article>
+    </template>
+
+    <template id="trw">
+      <article id="trabajo4">
+        <p>TRW</p>
+        <img src="../public/Images/trw.png"></img>
+      </article>
+    </template>
+
+    <template id="option">
+      <article id="trabajo5">
+        <p>My best option</p>
+        <img src="../public/Images/option.jpg"></img>
+      </article>
+    </template>
+
+    <template id="media">
+      <article id="trabajo6">
+        <p>Media Markt</p>
+        <img src="../public/Images/media.png"></img>
+      </article>
+    </template>
+
+    <template id="cash">
+      <article id="trabajo7">
+        <p>Cash Converters</p>
+        <img src="../public/Images/cash.png"></img>
+      </article>
+    </template>
+
+    <template id="nor">
+      <article id="trabajo8">
+        <p>Normicro</p>
+        <img src="../public/Images/nor.jpg"></img>
+      </article>
+    </template>
+
+    <script>
+
+      const descripcion = document.getElementById("aprendido");
+
+      function pon(empleo){ 
+        let dany = document.getElementById(empleo);
+        let importado = document.importNode(dany.content, true);
+        descripcion.appendChild(importado);
+      }
+
+      function quita(trabajo){
+        let sobra = document.getElementById(trabajo);
+        descripcion.removeChild(sobra)
+      }
+
+    </script>  
+  </body>
+</html>
